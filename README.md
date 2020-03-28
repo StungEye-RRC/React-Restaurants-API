@@ -1,3 +1,11 @@
+# React Restaurants
+
+This app makes use of the JSON API from my [Restaurants-API-Rails repo](https://github.com/StungEye-RRC/Restaurants-API-Rails).
+
+The `master` branch contains the main React logic.
+
+The `add-material-ui` breaks the main component into child components and styles these components using [Material-UIu]compcomponets branch styles the componebrinpnao
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
