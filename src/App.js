@@ -41,6 +41,11 @@ function App() {
         />
         <button onClick={addRestaurant}>Create New Restaurant</button>
       </div>
+
+      {restaurants.length === 0 && (
+        <p>No restaurants found. Check API server.</p>
+      )}
+
       {restaurants.map(restaurant => (
         <div key={restaurant.id}>
           <h1>{restaurant.name}</h1>
