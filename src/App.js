@@ -2,10 +2,14 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 
 function App() {
+  /* UseState hook to estalish our getters and setters for component state. */
+
   const [restaurants, setRestaurants] = useState([]);
   const [newName, setNewName] = useState("");
   const [newDescription, setNewDescription] = useState("");
 
+  /* Fetch all restaurants and save them into state. */
+  /* Request does not include error handling logic. */
   useEffect(() => {
     fetch("http://localhost:3000/restaurants.json").then(response => {
       response.json().then(data => {
@@ -14,6 +18,10 @@ function App() {
     });
   }, []);
 
+  /* Add a new restaurant using the data supplied in the HTML inputs. */
+  /* No front-end form/data validation is currently present.          */
+  /* Server response is assumed to be confirmation. More logic is     */
+  /* required to support back-end validation errors.                  */
   const addRestaurant = () => {
     fetch("http://localhost:3000/restaurants.json", {
       method: "POST",
@@ -26,6 +34,7 @@ function App() {
     })
       .then(response => response.json())
       .then(newRestaurant => setRestaurants([...restaurants, newRestaurant]));
+    /* The ... is the Javascript spread operator. */
   };
 
   return (
