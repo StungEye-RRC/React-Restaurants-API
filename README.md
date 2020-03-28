@@ -4,7 +4,7 @@ This app makes use of the JSON API from my [Restaurants-API-Rails repo](https://
 
 The `master` branch contains the main React logic.
 
-The `add-material-ui` breaks the main component into child components and styles these components using [Material-UI](https://material-ui.com/).
+The `add-material-ui` branch breaks the main component into child components and styles these components using [Material-UI](https://material-ui.com/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
