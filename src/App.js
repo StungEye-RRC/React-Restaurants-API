@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+
+function truncateString(str, num) {
+  if (str.length <= num) {
+    return str;
+  }
+  return str.slice(0, num) + "...";
+}
 
 function App() {
   /* UseState hook to estalish our getters and setters for component state. */
